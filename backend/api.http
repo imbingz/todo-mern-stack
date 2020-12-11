@@ -1,0 +1,14 @@
+GET http://localhost:5005/api/todo/
+
+#####
+POST http://localhost:5005/api/todo/
+Content-Type: application/json
+
+{
+  "text": "Learn react"
+}
+
+
+### delete post 
+DELETE http://localhost:5005/api/todo/5fd2de9bc2e0bf126a14f096
+Content-Type: application/json

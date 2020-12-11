@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5005;
 //use express middlewaree
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(routes);
 
 app.listen(PORT, () => {
 	console.log(`listening on PORT ${PORT}. http://localhost:${PORT}`);

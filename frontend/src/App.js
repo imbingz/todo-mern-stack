@@ -1,14 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AddTodo from './pages/AddTodo';
+import Homepage from './pages/Homepage';
+import ViewTodos from './pages/ViewTodos';
 
 function App() {
 	return (
 		<BrowserRouter>
-			<h1>Todo App</h1>
 			<Switch>
-				<Route exact path='/'  component={} />
-				<Route exact path='/todos'  component={} />
-				<Route exact path='/todos/new'  component={} />	
+				<Route exact path='/' component={Homepage} />
+				<Route exact path='/todos' component={ViewTodos} />
+				<Route exact path='/todos/new' component={AddTodo} />
 			</Switch>
 		</BrowserRouter>
 	);

@@ -9,7 +9,7 @@ const initState = {
 };
 
 const reducer = (state, action) => {
-	console.log(state, action);
+	console.log('current state in reducer function inside glbalContext: ', state, action);
 	switch (action.type) {
 		case 'setTodos':
 			return {
@@ -35,5 +35,6 @@ const GlobalProvider = props => {
 export default GlobalProvider;
 
 export const useGlobalContext = () => {
+	console.log(useContext(GlobalContext));
 	return useContext(GlobalContext);
 };

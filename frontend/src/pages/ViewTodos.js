@@ -12,10 +12,10 @@ function ViewTodos() {
 			try {
 				const response = await fetch('/api/todo');
 				const json = await response.json();
-				// console.log(json.data);
+				console.log(json.data);
 				//==> (json.data) is array of todo obj {_id: , text: ""}, json obj is what we sent out as response from backend {success: true, data}
 				//pass arguments to dispacth
-				dispatch({ tpye: 'setTodos', payload: json.data });
+				dispatch({ type: 'setTodos', payload: json.data });
 			} catch (err) {
 				console.error(err);
 			}

@@ -1,8 +1,11 @@
 {
-	"name": "class-demo",
+	"name": "todo-mern",
 	"version": "1.0.0",
-	"main": "index.js",
-	"license": "MIT",
+	"engines": {
+		"node": "12.x"
+	},
+	"description": "",
+	"main": "server.js",
 	"scripts": {
 		"start": "node server/server.js",
 		"start:server": "nodemon server/server.js",
@@ -12,8 +15,14 @@
 		"build": "cd client && npm run build",
 		"heroku-postbuild": "npm run build"
 	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
 	"dependencies": {
+		"cors": "^2.8.5",
 		"express": "^4.17.1",
-		"mongoose": "^5.11.7"
+		"mongodb": "^3.6.3",
+		"mongoose": "^5.11.7",
+		"yarn": "^1.22.10"
 	}
 }

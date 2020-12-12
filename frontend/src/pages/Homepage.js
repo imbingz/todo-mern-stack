@@ -1,11 +1,10 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
+
 
 function Homepage() {
    return (
       <>
-         <Navbar />
-
+        <h2>A Demo Todo App - MERN!</h2>
       </>
    )
 }

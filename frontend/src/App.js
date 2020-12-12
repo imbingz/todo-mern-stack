@@ -11,11 +11,13 @@ function App() {
 		<BrowserRouter>
 			<GlobalProvider>
 				<Navbar />
-				<Switch>
-					<Route exact path='/' component={Homepage} />
-					<Route exact path='/todos' component={ViewTodos} />
-					<Route exact path='/todos/new' component={AddTodo} />
-				</Switch>
+				<div className='App'>
+					<Switch>
+						<Route exact path='/' component={Homepage} />
+						<Route exact path='/todos' component={ViewTodos} />
+						<Route exact path='/todos/new' component={AddTodo} />
+					</Switch>
+				</div>
 			</GlobalProvider>
 		</BrowserRouter>
 	);

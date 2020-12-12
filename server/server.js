@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 
-//For heroku deployment
+//For heroku deployment - this block of codes will only run in production env
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 	app.get('*', (req, res) => {

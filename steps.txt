@@ -1,0 +1,40 @@
+view todo pages
+-  when  page  loads,  fetch todos - make sure the path is using  proxy
+add to package.json the following  line
+   	"proxy": "http://localhost:5000" 
+
+update the following to server package.json (need to change client path to frontend path ../frontend) (server run concurrently)
+	"start": "node server/server.js",
+    "start:server": "nodemon server/server.js",
+    "start:client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run start:server\" \"yarn run start:client\"",
+    "install": "cd client && yarn",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+
+Heroku deploy
+- run "yarn build" in frontend terminal
+- add scripts in package.json (backend )
+	"install": "cd client && yarn",
+	"build": "cd client && npm run build",
+	"heroku-postbuild": "npm run build"
+- add the following in sever.js (backend)
+	if (process.env.NODE_ENV === 'production') {
+		app.use(express.static('client/build'));
+		app.get('*', (req, res) => {
+			res.sendFile(path.join(__dirname, '../client/build/index.html'));
+		});
+	}
+- in termiinal 
+	heroku login
+	heroku create
+	git remote -v 
+	git add .
+	git commit t-m ""
+	git push heroku main (or master)
+	
+
+
+
+
+

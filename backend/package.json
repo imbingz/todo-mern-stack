@@ -6,8 +6,8 @@
 	"scripts": {
 		"start": "node server.js",
 		"dev": "nodemon server.js",
-		"install": "cd client && yarn",
-		"build": "cd client && npm run build",
+		"install": "cd ../frontend && yarn",
+		"build": "cd ../frontend && npm run build",
 		"heroku-postbuild": "npm run build"
 	},
 	"keywords": [],
